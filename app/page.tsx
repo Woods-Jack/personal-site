@@ -1,5 +1,5 @@
 import Avatar from "@/components/common/Avatar"
-import NavMenu from "../components/common/NavMenu"
+import NavMenu from "../components/common/NavMenu/NavMenu"
 
 export default async function Home() {
 
@@ -11,7 +11,7 @@ export default async function Home() {
           <h1 className="text-9xl z-10">Jack Woods</h1>
           <div className="md:absolute ml-auto bg-[#ff709c] m-auto mt-8 h-3 w-16 md:mr-8 md:mb-16"/>
           <div>
-          <p className="text-xl italic mt-16 md:mb-0">London-based Software Engineer</p>
+            <p className="text-xl italic mt-16 md:mb-0">London-based Software Engineer</p>
           </div>
         </div>
         <div className="h-[80%] md:pl-[10%] mx-auto flex flex-col justify-center md:justify-start">

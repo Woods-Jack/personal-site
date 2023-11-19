@@ -1,7 +1,8 @@
 "use client"
 
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+
 
 const Avatar = () => {
   const [imgOffset, setImgOffset] = useState(0);
