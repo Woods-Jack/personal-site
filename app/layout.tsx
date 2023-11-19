@@ -16,14 +16,12 @@ const playfair_display = Playfair_Display({
   variable: '--font-playfair',
 })
 
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout({children}: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${nunito.variable} ${playfair_display.variable}`}>{children}</body>
-    </html>
+      <html lang="en">
+        <body className={`${nunito.variable} ${playfair_display.variable}`}>{children}</body>
+      </html>
   )
 }
