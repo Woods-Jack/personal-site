@@ -2,7 +2,6 @@ import Avatar from "@/components/common/Avatar"
 import NavMenu from "../components/common/NavMenu/NavMenu"
 
 export default async function Home() {
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="flex flex-col md:flex-row h-screen w-full md:justify-center md:space-x-10 space-y-10 items-center py-8 md:py-24 md:px-8 xl:px-24">

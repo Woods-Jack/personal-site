@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-
 const Avatar = () => {
   const [imgOffset, setImgOffset] = useState(0);
   const accelerator = -0.3;
@@ -26,7 +25,7 @@ const Avatar = () => {
         width={0}
         height={0}
         sizes="100vw"
-        alt="Jack Woods Avatar"
+        alt="Jack Woods Avatar"y
         className="w-full h-full object-cover"
       />
     </div>

@@ -18,9 +18,12 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   font-family: var(--font-nunito);
+  @media (min-width: theme('screens.md')) {
+    font-size: larger;
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: var(--font-playfair);
 }
 
