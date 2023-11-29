@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Nunito, Playfair_Display } from 'next/font/google'
 import './globals.css'
+import { HeaderNav } from '@/components/common/NavMenu/HeaderNav'
+import Footer from '@/components/common/Footer/Footer'
 
 export const metadata: Metadata = {
   title: 'Jack Woods',
@@ -21,7 +23,11 @@ export default function RootLayout({children}: {
 }) {
   return (
       <html lang="en">
-        <body className={`${nunito.variable} ${playfair_display.variable}`}>{children}</body>
+        <body className={`${nunito.variable} ${playfair_display.variable}`}>
+          <HeaderNav />
+          {children}
+          <Footer />
+        </body>
       </html>
   )
 }

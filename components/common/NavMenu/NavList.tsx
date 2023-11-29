@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { useRef } from 'react';
 import { useIsVisible } from '../../../hooks/useIsVisible';
+import { menuItems } from './constants/menuItems';
 
-interface MenuItemsProps {
+interface NavListProps {
     isMobile: boolean;
 }
 
-const MenuItems = ({isMobile}:MenuItemsProps) => {
+const NavList = ({isMobile}:NavListProps) => {
     const navList = useRef<HTMLElement | null>(null);
     const isVisible = useIsVisible(navList);
 
@@ -22,29 +23,16 @@ const MenuItems = ({isMobile}:MenuItemsProps) => {
     return (
     <nav ref={navList} className='flex h-full'>
         <ul className={containerStyle}>
-          <li>
-            <Link href='/'>
-              <p className={listStyles}>About Me</p>
-            </Link>
-          </li>
-          <li>
-            <Link href='/cv'>
-              <p className={listStyles}>My CV</p>
-            </Link>
-          </li>
-          <li>
-            <Link href='/projects'>
-              <p className={listStyles}>Projects</p>
-            </Link>
-          </li>
-          <li>
-            <Link href='/blog'>
-              <p className={listStyles}>Blog</p>
-            </Link>
-          </li>
+          {menuItems.map((item) => (
+            <li key={item.title}>
+              <Link href={item.slug}>
+                <p className={listStyles}>{item.title}</p>
+              </Link>
+            </li>
+          ))}
         </ul>
     </nav>
     )
 };
 
-export default MenuItems;
+export default NavList;

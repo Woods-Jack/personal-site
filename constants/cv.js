@@ -30,6 +30,28 @@ export const cv = {
                     desc: 'First Class Honours',
                 }
             ]
+        },
+        {
+            header: 'Education',
+            content: [
+                {
+                    title: 'University of Bath',
+                    subtitle: 'Mechanical Engineering (MEng)',
+                    date: 'September 2017 - June 2022',
+                    desc: 'First Class Honours',
+                }
+            ]
+        },
+        {
+            header: 'Education',
+            content: [
+                {
+                    title: 'University of Bath',
+                    subtitle: 'Mechanical Engineering (MEng)',
+                    date: 'September 2017 - June 2022',
+                    desc: 'First Class Honours',
+                }
+            ]
         }
     ]
 }

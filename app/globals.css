@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 33, 53, 85;
+  --foreground-rgb: 12, 20, 70;
   --background-rgb: 245, 239, 231;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 245, 239, 231;
-    --background-rgb: 33, 53, 85;
+    --background-rgb: 12, 20, 70;
   }
 }
 
@@ -21,6 +21,19 @@ body {
   @media (min-width: theme('screens.md')) {
     font-size: larger;
   }
+}
+
+.light-title {
+  color: rgb(var(--background-rgb));
+  font-family: var(--font-playfair);
+}
+
+.bg-dark {
+  background: rgb(var(--foreground-rgb));
+}
+
+.light-text {
+  color: rgb(var(--background-rgb));
 }
 
 h1, h2 {
@@ -56,6 +69,7 @@ h4 {
   }
   @media (max-width: theme('screens.md')) {
     width: 50%;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
     transform: translate(48%, 25%);

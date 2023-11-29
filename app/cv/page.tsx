@@ -10,11 +10,15 @@ export default function CVPage() {
         <h1>Jack Woods - CV</h1>
         <p>{header.content}</p>
         <div className='flex flex-col space-y-4'>
-          {sections.map((section) => (
-            <CVSection key={section.header} header={section.header} content={section.content} />
+          {sections.map((section, index) => (
+            <>
+              <CVSection key={section.header} header={section.header} content={section.content} />
+              {index !== sections.length -1 && (
+                <hr className="bg-[#ff709c] px-4 mt-2 mx-16 h-[2px] w-max-full"/>
+              )}
+            </>
           ))}
         </div>
-
       </div>
     </main>
   )
