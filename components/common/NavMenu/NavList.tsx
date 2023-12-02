@@ -14,8 +14,8 @@ const NavList = ({isMobile}:NavListProps) => {
     const fadeIn = `transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`
 
     const listStyles = isMobile ? 
-        'hover:text-[#ff709c]' :
-        'transition duration-300 ease-in-out transform hover:translate-x-2 hover:text-[#ff709c]';
+        'text-4xl hover:text-[#ff709c]' :
+        'text-4xl transition duration-300 ease-in-out transform hover:translate-x-2 hover:text-[#ff709c]';
     const containerStyle = isMobile ?
         `text-4xl my-8 text-center space-y-16 opacity-0 ${fadeIn}` :
         `flex flex-col justify-evenly flex-1 text-4xl text-center md:text-left opacity-0 ${fadeIn}`;

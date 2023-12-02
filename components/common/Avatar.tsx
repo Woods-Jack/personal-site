@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useWindowSize } from "@/hooks/useWindowSize";
-import { useIsVisible } from "@/hooks/useIsVisible";
 
 const Avatar = () => {
   const [imgOffset, setImgOffset] = useState(0);

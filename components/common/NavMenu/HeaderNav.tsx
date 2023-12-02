@@ -38,7 +38,7 @@ export const HeaderNav = () => {
   };
 
   return (
-    <div className={`fixed bg-[#175873] h-20 w-full z-20 flex items-center justify-between px-6 ${showHeader ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+    <div className={`fixed shadow-md bg-[#175873] h-20 w-full z-20 flex items-center justify-between px-6 ${showHeader ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
       <p className="light-title text-4xl">Jack Woods</p>
       <div>
         <ul className="hidden md:flex flex-row space-x-6">
