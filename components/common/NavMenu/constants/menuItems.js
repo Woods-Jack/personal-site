@@ -1,18 +1,18 @@
 export const menuItems =  [
     {
       title: 'About Me',
-      slug: '/',
+      slug: '/#about',
     },
     {
       title: 'My CV',
       slug: '/cv',
     },
     {
-      title: 'Projects',
-      slug: '/projects',
+      title: 'Passions',
+      slug: '/passions',
     },
     {
-      title: 'Blog',
+      title: 'Travel Blog',
       slug: '/blog',
     }
 ];

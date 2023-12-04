@@ -5,8 +5,8 @@ export default function CVPage() {
   const {header, sections} = cv;
 
   return(
-    <main >
-      <div className='max-w-[1200px] flex flex-col md:mx-auto mx-4 justify-center mt-16'>
+    <main className='pt-24'>
+      <div className='max-w-[1200px] flex flex-col md:mx-auto mx-4 justify-center'>
         <h1>Jack Woods - CV</h1>
         <p>{header.content}</p>
         <div className='flex flex-col space-y-4'>

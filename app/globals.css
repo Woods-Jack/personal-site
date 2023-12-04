@@ -4,14 +4,22 @@
 
 :root {
   --foreground-rgb: 12, 20, 70;
+  --foreground-secondary: 23, 88, 115;
   --background-rgb: 245, 239, 231;
+  --background-secondary: 216, 196, 182;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 245, 239, 231;
+    --foreground-secondary: 216, 196, 182;
     --background-rgb: 12, 20, 70;
+    --background-secondary: 23, 88, 115;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -30,6 +38,14 @@ body {
 
 .bg-dark {
   background: rgb(var(--foreground-rgb));
+}
+
+.bg-dark-sec {
+  background: rgb(var(--foreground-secondary));
+}
+
+.bg-light-sec {
+  background: rgb(var(--background-secondary));
 }
 
 .light-text {

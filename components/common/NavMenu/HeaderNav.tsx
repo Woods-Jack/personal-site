@@ -38,14 +38,16 @@ export const HeaderNav = () => {
   };
 
   return (
-    <div className={`fixed shadow-md bg-[#175873] h-20 w-full z-20 flex items-center justify-between px-6 ${showHeader ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
-      <p className="light-title text-4xl">Jack Woods</p>
+    <div className={`fixed shadow-md bg-dark-sec h-20 w-full z-20 flex items-center justify-between px-6 ${showHeader ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+      <a href="/">
+        <p className="light-title text-4xl">Jack Woods</p>
+      </a>
       <div>
         <ul className="hidden md:flex flex-row space-x-6">
           {menuItems.map((item) => (
             <li className="relative group" key={item.title}>
               <Link href={item.slug}>
-                <p className="light-text text-xl">{item.title}</p>
+                <div className="light-text text-xl">{item.title}</div>
                 <span className="absolute h-1 w-full bg-[#ff709c] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform"></span>
               </Link>
             </li>
