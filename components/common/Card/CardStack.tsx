@@ -5,7 +5,7 @@ export const CardStack = ({title, img, ctaText, href}: CardRowProps) => {
   const {src, alt} = img;
 
   return(
-    <div className="flex md:flex-row flex-col bg-teal w-full md:pl-4 justify-between items-start bg-[#D8C4B6] rounded">
+    <div className="flex md:flex-row flex-col w-full md:pl-4 justify-between items-start bg-light-sec rounded">
       <div className="flex flex-col justify-between h-[300px] md:w-2/3 w-full py-2">
         <h3>{title}</h3>
         <p>This is a description</p>

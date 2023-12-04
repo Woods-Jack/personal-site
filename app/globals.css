@@ -13,8 +13,8 @@
   :root {
     --foreground-rgb: 245, 239, 231;
     --foreground-secondary: 216, 196, 182;
-    --background-rgb: 12, 20, 70;
-    --background-secondary: 23, 88, 115;
+    --background-rgb: 18, 18, 18;
+    --background-secondary: 56, 56, 56;
   }
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .light-title {
-  color: rgb(var(--background-rgb));
+  color: rgb(245,239,231);
   font-family: var(--font-playfair);
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .light-text {
-  color: rgb(var(--background-rgb));
+  color: rgb(245,239,231);
 }
 
 h1, h2 {
