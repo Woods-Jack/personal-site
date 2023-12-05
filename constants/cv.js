@@ -1,6 +1,6 @@
 export const cv = {
     header: {
-        content: 'hello header'
+        content: 'This CV is still work in progress. For a full version, reach out to me on LinkedIn.'
     },
     sections: [
         {

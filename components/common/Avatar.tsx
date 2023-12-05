@@ -15,7 +15,7 @@ const Avatar = () => {
   }, []);
 
   const attrs = `translate(-48%, calc(-25% + ${imgOffset * -0.3}px)) scale(${1 + 0.0005 * imgOffset})`;
-  const attrsMobile = `translate(0%, ${imgOffset * -0.3}px) scale(${1 + 0.0005 * imgOffset})`;
+  const attrsMobile = `translate(0%, ${imgOffset * -0.3}px)`;
   const parallax = isMobile ? attrsMobile : attrs;
 
   if (isMobile === null) {
