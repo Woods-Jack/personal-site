@@ -50,7 +50,13 @@ export default async function Home() {
             </p>
             <div className="w-full flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-4 justify-between items-center">
               {passions.map((passion) => (
-                <CardRow key={passion.title} title={passion.title} img={passion.img} ctaText='Read More' href={`/passions/${passion.slug}`}/>
+                <CardRow 
+                  key={passion.title} 
+                  title={passion.title} 
+                  img={passion.img} 
+                  ctaText='Read More' 
+                  href={`/passions/${passion.slug}`}
+                />
               ))}
             </div>
           </div>
