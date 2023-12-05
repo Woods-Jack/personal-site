@@ -57,7 +57,7 @@ export const HeaderNav = () => {
       <div className='md:hidden'>
         <button onClick={toggleMobileMenu} className='text-4xl light-text'>
           &#9776;
-        </button>`
+        </button>
       </div>
       {showMobileMenu && <div className={`fixed bottom-0 left-0 w-full bg-[#D8C4B6] z-50 flex flex-col items-center transform translate-y-8 transition-opacity duration-300`}>
             <NavList isMobile={true} />

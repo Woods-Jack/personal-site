@@ -4,7 +4,7 @@ export interface CVSectionProps {
 }
 
 export interface SectionEntryProps {
-    title: string;
+    title?: string;
     subtitle?: string;
     date?: string;
     desc?: string;
