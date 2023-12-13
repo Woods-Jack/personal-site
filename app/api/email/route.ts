@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
       transporter.sendMail(mailOptions, function (err: any, info: any) {
         if (!err) {
           console.log('Email sent:', info)
-          resolve('Email Sent:');
+          resolve('Thanks for your message! If it requires a response, I will aim to get back to you in the next 3 business days.');
         } else {
           console.log('Error sending email:', err)
           reject(err.message);
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await sendMailPromise();
-    return NextResponse.json({ message: 'Email Sent' }, { status: 200 });
+    return NextResponse.json({ message: 'Thanks for your message! If it requires a response, I will aim to get back to you in the next 3 business days.' }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }

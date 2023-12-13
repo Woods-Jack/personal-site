@@ -48,6 +48,10 @@ body {
   background: rgb(var(--background-secondary));
 }
 
+.bg-light {
+  background: rgb(var(--background-rgb));
+}
+
 .light-text {
   color: rgb(245,239,231);
 }

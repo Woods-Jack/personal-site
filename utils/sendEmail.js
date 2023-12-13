@@ -26,7 +26,7 @@ async function sendEmail(data) {
     }
   } catch (error) {
     console.error(error);
-    return 'An error occurred. Please try again later or reach out on LinkedIn.';
+    return 'An error occurred. Please try again later or reach out to me on LinkedIn.';
   }
 }
 
