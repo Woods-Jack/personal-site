@@ -26,8 +26,7 @@ export async function GET(req: NextRequest) {
     const accessToken = await getAccessToken();
     const res= NextResponse.json({ accessToken }, { status: 200 });
     res.headers.set('Cache-Control', 'max-age=3600');
-
-
+    return res;
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }
