@@ -5,8 +5,13 @@ import { HeaderNav } from '@/components/common/NavMenu/HeaderNav'
 import Footer from '@/components/common/Footer/Footer'
 
 export const metadata: Metadata = {
-  title: 'Jack Woods',
+  title: {
+    template: '%s | Jack Woods\' Personal Portfolio',
+    default: 'Jack Woods\' Personal Portfolio',
+    absolute: 'Jack Woods - Software Engineer from London, UK',
+  },
   description: 'A personal portfolio for Jack Woods - a London based software engineer.',
+  creator: 'Jack Woods'
 }
 
 const nunito = Nunito({ 

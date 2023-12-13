@@ -1,6 +1,6 @@
 export const cv = {
     header: {
-        content: 'This CV is still work in progress. For a full version, reach out to me on LinkedIn.'
+        content: 'For full contact details or a print copy of my CV, reach out to me using the contact form, or connect with me on LinkedIn.'
     },
     sections: [
         {
@@ -69,9 +69,12 @@ export const cv = {
             header: 'Other Skills',
             content: [
                 {
-                    title: 'Generative AI',
-                    subtitle: 'Mechanical Engineering (MEng)',
-                    desc: 'First Class Honours',
+                    title: 'Presenting / Public Speaking',
+                    desc: 'I thoroughly enjoy delivering presentations and showcasing work to both technical and non-technical audiences. I take particular pride in being able to communicate technical content in an engaging and relevant way to clients or the general public. My experience in theatre has given me extensive practise performing in front of large audiences.',
+                },
+                {
+                    title: '',
+                    desc: ''
                 }
             ]
         },
@@ -79,9 +82,20 @@ export const cv = {
             header: 'Hobbies',
             content: [
                 {
-                    title: 'Generative AI',
-                    subtitle: 'Mechanical Engineering (MEng)',
-                    desc: 'First Class Honours',
+                    subtitle: 'Motorsport',
+                    desc: 'Karting, watching and attending Formula 1 races.',
+                },
+                {
+                    subtitle: 'Coffee',
+                    desc: 'Brewing coffee, Latte Art, visiting specialty coffee shops.',
+                },
+                {
+                    subtitle: 'Theatre',
+                    desc: 'Watching plays/musicals, attending classes and amatuer dramatics groups.',
+                },
+                {
+                    subtitle: 'Travel',
+                    desc: 'Taking weekend trips away, planning holidays and looking for opportunities to travel through work.'
                 }
             ]
         },

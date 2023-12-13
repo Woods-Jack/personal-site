@@ -3,6 +3,7 @@ import NavMenu from "../components/common/NavMenu/HomepageNav"
 import Image from "next/image"
 import { passions } from '@/constants/passions';
 import { CardRow } from "@/components/common/Card/CardRow";
+import { Contact } from "@/components/common/Contact/Contact";
 
 export default async function Home() {
   return (
@@ -45,10 +46,10 @@ export default async function Home() {
           <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col items-center md:space-x-2 h-full">
             <h2>My Passions</h2>
             <p>
-              This space is not just for my career journey but also for the other things that bring me joy in my everyday life. 
-              To me, escapism interests completely different to my work allows me to stay motivated.
+              This site also acts as a place to share projects and work from areas of my life beyond my career.
+              Click through below to find out about some of the things I enjoy doing outside of work.
             </p>
-            <div className="w-full flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-4 justify-between items-center">
+            <div className="w-full flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-4 my-4 justify-between items-center">
               {passions.map((passion) => (
                 <CardRow 
                   key={passion.title} 
@@ -59,6 +60,16 @@ export default async function Home() {
                 />
               ))}
             </div>
+          </div>
+        </div>
+        <div className="w-full bg-light-sec">
+          <div id="contact" className="max-w-[1200px] w-full mx-auto flex flex-col md:flex-row items-stretch md:space-x-2 h-full">
+            <div className="flex flex-col w-full px-4 my-6 items-center md:items-start">
+              <h2>Get In Touch</h2>
+              <p>I&apos;d love to hear from you. Get in touch with me using the contact form below</p>
+              <Contact />
+            </div>
+            
           </div>
         </div>
       </main>

@@ -1,5 +1,10 @@
 import { passions } from "@/constants/passions";
 import { CardStack } from "@/components/common/Card/CardStack";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Passions'
+};
 
 const PassionsPage = () => {
   return(
