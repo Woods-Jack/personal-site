@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "app/**/route.ts": {
+      "memory": 1024
+    }
+  }
+}
