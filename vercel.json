@@ -1,6 +1,6 @@
 {
   "functions": {
-    "app/**/route.ts": {
+    "app/api/**/*.ts": {
       "memory": 1024
     }
   }
