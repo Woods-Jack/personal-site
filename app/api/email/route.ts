@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from 'nodemailer';
-import { google } from 'googleapis';
 import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(req: NextRequest) {

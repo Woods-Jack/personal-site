@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
     refresh_token: process.env.OAUTH_REFRESH_TOKEN
   });
 
-  const accessToken = await new Promise((resolve, reject) => {
+  const getAccessToken = () => new Promise((resolve, reject) => {
     oauth2Client.getAccessToken((err, token) => {
       if (err) {
         reject("Failed to create access token :(");
@@ -23,6 +23,7 @@ export async function GET(req: NextRequest) {
   });
 
   try {
+    const accessToken = await getAccessToken();
     return NextResponse.json({ accessToken }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
