@@ -13,22 +13,27 @@ export async function GET(req: NextRequest) {
     refresh_token: process.env.OAUTH_REFRESH_TOKEN
   });
 
-  const getAccessToken = () => new Promise((resolve, reject) => {
-    oauth2Client.getAccessToken((err, token) => {
-      if (err) {
-        reject("Failed to create access token :(");
-      }
-      resolve(token);
+  const getAccessToken = async () => {
+    return new Promise((resolve, reject) => {
+      oauth2Client.getAccessToken((err, token) => {
+        if (err) {
+          reject("Failed to create access token :(");
+        }
+        resolve(token);
+      });
     });
-  });
+  };
+  
 
   try {
     const accessToken = await getAccessToken();
-    const res= NextResponse.json({ accessToken }, { status: 200 });
-    console.log('token', accessToken)
+    console.log('token', accessToken);
+    const res = NextResponse.json({ accessToken }, { status: 200 });
     res.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');
     return res;
   } catch (err) {
+    console.error('Error while fetching access token:', err);
     return NextResponse.json({ error: err }, { status: 500 });
   }
+  
 }
