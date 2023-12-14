@@ -11,7 +11,7 @@ async function sendEmail(data) {
     }
 
     const { accessToken } = await accessTokenResponse.json();
-
+    console.log('cs token', accessToken);
     if (accessToken) {
       const emailResponse = await fetch('/api/email', {
         method: 'POST',
