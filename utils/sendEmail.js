@@ -11,11 +11,12 @@ async function sendEmail(data) {
     }
 
     const { accessToken } = await accessTokenResponse.json();
+    const { token, timestamp } = accessToken;
     console.log('cs token', accessToken);
-    if (accessToken) {
+    if (token && timestamp) {
       const emailResponse = await fetch('/api/email', {
         method: 'POST',
-        body: JSON.stringify({ name, email, message, accessToken }),
+        body: JSON.stringify({ name, email, message, token}),
       });
 
       if (!emailResponse.ok) {

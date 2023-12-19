@@ -3,14 +3,14 @@ import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(req: NextRequest) {
-  const { email, name, message, accessToken } = await req.json();
+  const { email, name, message, token } = await req.json();
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       type: 'OAuth2',
       user: process.env.MAIL_USERNAME,
-      accessToken,
+      accessToken: token,
       clientId: process.env.OAUTH_CLIENT_ID,
       clientSecret: process.env.OATUH_CLIENT_SECRET,
     },
