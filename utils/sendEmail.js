@@ -10,9 +10,8 @@ async function sendEmail(data) {
       throw new Error(`Failed to fetch access token. Status: ${accessTokenResponse.status}`);
     }
 
-    const { accessToken } = await accessTokenResponse.json();
-    const { token, timestamp } = accessToken;
-    console.log('cs token', accessToken);
+    const { token, timestamp} = await accessTokenResponse.json();
+    console.log('cs token', token);
     if (token && timestamp) {
       const emailResponse = await fetch('/api/email', {
         method: 'POST',

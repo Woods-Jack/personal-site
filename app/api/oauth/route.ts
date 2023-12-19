@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
   try {
     const accessToken = await getAccessToken();
     console.log('token', accessToken);
-    const res = NextResponse.json({ accessToken }, { status: 200 });
+    const res = NextResponse.json(accessToken , { status: 200 });
     res.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
     return res;
   } catch (err) {
