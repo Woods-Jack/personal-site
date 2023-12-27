@@ -13,7 +13,7 @@ export const HeaderNav = () => {
 
   useEffect(() => {
     setShowMobileMenu(false);
-    if (pathname === '/') {
+    if (pathname === '/' || pathname.includes('studio')) {
       const handleScroll = () => {
         const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;

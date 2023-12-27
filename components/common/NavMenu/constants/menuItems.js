@@ -12,7 +12,7 @@ export const menuItems =  [
       slug: '/projects',
     },
     {
-      title: 'Passions',
-      slug: '/passions',
+      title: 'Blog',
+      slug: '/blog',
     },
 ];
