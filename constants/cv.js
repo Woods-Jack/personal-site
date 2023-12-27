@@ -10,7 +10,7 @@ export const cv = {
                     title: 'Publicis Sapient',
                     subtitle: 'Associate Software Engineer',
                     date: 'October 2022 - Present',
-                    desc: 'Software engineer for a technology consultancy firm as part of a graduate programme. Have spent the majority of my time working with front-end technologies for a large UK retail client eCommerce platform. Liased with client UX / Product Managers and Senior Engineering leads to develop pages, components, unit tests and mock APIs. Also carried out Web Accessibility reviews and Performance POCs as part of the project release phase.'
+                    desc: 'Software engineer for a technology consultancy firm as part of a graduate programme. Have spent the majority of my time working with front-end technologies for a large UK retail client eCommerce platform. Liaised with client UX / Product Managers and Senior Engineering leads to develop pages, components, unit tests and mock APIs. Also carried out Web Accessibility reviews and Performance POCs as part of the project release phase.'
                 },
                 {
                     title: 'Publicis Sapient',
@@ -22,7 +22,7 @@ export const cv = {
                     title: 'Buro Happold',
                     subtitle: 'Mechanical Engineering Placement Student',
                     date: 'July 2019 - August 2020',
-                    desc: 'Year-long placement at a building consultancy as part of my degree programme. Worked in a new smart buildings team to clean up building sensor data and write custom functions to find insights to improve building management and reduce carbon footprint. Also advised clients and engineering teams on emerging smart building and IoT products and technologies, and how they could be integrated into specific projects to add customer valuie.'
+                    desc: 'Year-long placement at a building consultancy as part of my degree programme. Worked in a new smart buildings team to clean up building sensor data and write custom functions to find insights to improve building management and reduce carbon footprint. Also advised clients and engineering teams on emerging smart building and IoT products and technologies, and how they could be integrated into specific projects to add customer value.'
                 },
             ],
         },

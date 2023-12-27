@@ -69,9 +69,9 @@ h2 {
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 12px;
-  @media (min-width: theme('screens.md')) {
+  /* @media (min-width: theme('screens.md')) {
     font-size: 4rem;
-  }
+  } */
 }
 
 h3 {

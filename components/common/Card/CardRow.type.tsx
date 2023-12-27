@@ -6,4 +6,6 @@ export interface CardRowProps {
   };
   ctaText: string;
   href: string;
+  date?: string;
+  desc?: string;
 }
