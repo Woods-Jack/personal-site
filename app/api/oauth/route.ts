@@ -28,14 +28,13 @@ export async function GET(req: NextRequest) {
           }
           resolve(accessToken);
         }
-        reject("Failed to create access token :(");
+        reject(`Failed to create access token :( - ${err}`);
       });
     });
   };
 
   try {
     const accessToken = await getAccessToken();
-    console.log('token', accessToken);
     const res = NextResponse.json(accessToken , { status: 200 });
     res.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
     return res;
