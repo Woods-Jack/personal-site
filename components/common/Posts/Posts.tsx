@@ -1,10 +1,9 @@
 "use client";
 
-import { useRouter } from 'next/router';
 import React, {useState} from 'react';
 import PostList from "./PostList";
 import Categories from "./Categories";
-import { SanityDocument } from "next-sanity";
+import { SanityDocument } from "@sanity/types";
 import { client } from '@/sanity/lib/client';
 import { postsByCategory, postsQuery } from '@/sanity/lib/queries';
 
