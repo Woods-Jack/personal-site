@@ -22,5 +22,5 @@ export const passions = [
       alt: 'Jack and cast members singing on stage.',
     },
     slug: 'theatre',
-  }
+  },
 ]

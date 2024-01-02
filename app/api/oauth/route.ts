@@ -43,3 +43,5 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: err }, { status: 500 });
   } 
 }
+
+export const revalidate = 3600;

@@ -21,7 +21,7 @@ export default function Post({ post }: { post: SanityDocument }) {
         <div className="flex flex-row space-x-4 justify-end items-end">
           <em>Published {formatDate(publishedAt)}</em>
           {categories.map((category: string) => (
-            <Link key={category} className="inline-block bg-[#175873] light-text rounded-xl px-4 py-2 cursor-pointer" href={`/category/${encodeURIComponent(category)}`}>
+            <Link key={category} className="inline-block bg-[#175873] light-text rounded-xl px-4 py-2 cursor-pointer" href={`/passions/${category.toLowerCase().replaceAll(' ','')}`}>
               {category}
             </Link>
           ))}
