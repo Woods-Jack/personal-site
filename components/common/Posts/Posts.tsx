@@ -34,7 +34,7 @@ const Posts = ({categories, initPosts}: PostsProps) => {
         <PostList posts={posts} />
       </div>
       <div className="md:w-1/4">
-        <Categories list={categories[0].categories} filterCb={handleCategoryChange}/>
+        <Categories list={categories[0]?.categories} filterCb={handleCategoryChange}/>
      </div>
     </div>
   )
