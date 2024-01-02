@@ -1,4 +1,4 @@
-import { SanityDocument } from "next-sanity";
+import { SanityDocument } from "@sanity/types";
 import Posts from "@/components/common/Posts/Posts";
 import { postsQuery, categoriesQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";

@@ -1,4 +1,4 @@
-import { groq } from "next-sanity";
+import groq from "groq";
 
 // Get all posts
 export const postsQuery = groq`*[_type == "post" && defined(slug.current)]{

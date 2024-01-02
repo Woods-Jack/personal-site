@@ -41,7 +41,7 @@ const Categories = ({list, filterCb}: CategoriesProps) => {
     
      }
      <div className="flex flex-col space-y-2">
-     {list.map((category) => (
+     {list && list.map((category) => (
         <button 
           key={category.title}
           className={`inline-block ${

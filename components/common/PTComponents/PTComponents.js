@@ -1,7 +1,5 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { client } from '@/sanity/lib/client'
-import { PortableTextReactComponents } from '@portabletext/react';
-import { SanityDocument } from 'next-sanity';
 
 
 function urlFor (source) {
