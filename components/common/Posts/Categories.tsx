@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 
 interface CategoriesProps {
-  list: Category[];
+  list: Category[] | null;
   filterCb: (category?: string) => void;
 }
 
-interface Category {
+export interface Category {
   title: string;
 }
 
