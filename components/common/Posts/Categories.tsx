@@ -1,14 +1,11 @@
 "use client";
 
 import React, { useState } from 'react';
+import { SanityDocument } from '@sanity/client';
 
 interface CategoriesProps {
-  list: Category[] | null;
+  list: SanityDocument[] | null;
   filterCb: (category?: string) => void;
-}
-
-export interface Category {
-  title: string;
 }
 
 const Categories = ({list, filterCb}: CategoriesProps) => {

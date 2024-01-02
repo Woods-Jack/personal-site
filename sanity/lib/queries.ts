@@ -16,11 +16,9 @@ export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]
   }`;
 
 // Get all categories
-export const categoriesQuery = groq`*[_type == "post"]{
-  categories[]->{
-    title
-  }
-} | order(categories asc)`;
+export const categoriesQuery = groq`*[_type == "category"]{
+  title
+} | order(title asc)`;
 
 // Filter by category
 export const postsByCategory = groq`*[_type == "post" && defined(slug.current) && references(*[_type == "category" && title == $selectedCategory]._id)]{
