@@ -4,6 +4,7 @@ import { postsQuery, categoriesQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 const BlogPage = async () => {
+  const revalidate = 60;
   const posts = await sanityFetch<SanityDocument[]>({ query: postsQuery });
   const categories = await sanityFetch<SanityDocument[]>({ query: categoriesQuery })
   
@@ -19,3 +20,4 @@ const BlogPage = async () => {
 }
 
 export default BlogPage;
+export const revalidate = 60;
