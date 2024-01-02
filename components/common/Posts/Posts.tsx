@@ -2,7 +2,7 @@
 
 import React, {useState} from 'react';
 import PostList from "./PostList";
-import Categories from "./Categories";
+import Categories, { Category } from "./Categories";
 import { SanityDocument } from "@sanity/types";
 import { client } from '@/sanity/lib/client';
 import { postsByCategory, postsQuery } from '@/sanity/lib/queries';
@@ -33,7 +33,7 @@ const Posts = ({categories, initPosts}: PostsProps) => {
         <PostList posts={posts} />
       </div>
       <div className="md:w-1/4">
-        <Categories list={categories[0]?.categories} filterCb={handleCategoryChange}/>
+        <Categories list={categories[0]?.categories as Category[]} filterCb={handleCategoryChange}/>
      </div>
     </div>
   )
