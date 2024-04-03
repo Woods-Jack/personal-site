@@ -1,8 +1,8 @@
 'use client';
 
 import React, {useState} from 'react';
-import { useForm } from 'react-hook-form'; 
-import sendEmail from '@/utils/sendEmail';
+import { useForm } from 'react-hook-form';
+
 
 type FormData = {
   name: string;
@@ -11,12 +11,31 @@ type FormData = {
 };
 
 export const Contact = () => {
-  const {register, handleSubmit, formState: { errors }} = useForm<FormData>(); 
+  const {register, formState: { errors }} = useForm<FormData>(); 
   const [responseMsg, setResponseMsg] = useState<string|undefined>()
-  const onSubmit = async (data: FormData) => {
-    const responseMessage = await sendEmail(data);
-    setResponseMsg(responseMessage);
-  };
+
+  async function onSubmit(e:any) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const accessKey = process.env.WEB3FORMS_ACCESS_KEY || ""
+    formData.append("access_key", accessKey);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      setResponseMsg("Thanks for your message! If it requires a response, I will aim to get back to you in the next 3 business days.");
+      e.target.reset();
+    } else {
+      console.log("Error", result);
+      setResponseMsg("An error occurred. Please try again later or reach out to me on LinkedIn.");
+    }
+  }
+
   return(
     responseMsg ? (
       <div className='mx-auto mt-2 py-8 px-4 flex items-center bg-light rounded-2xl'>
@@ -24,7 +43,7 @@ export const Contact = () => {
       </div>
       
     ) : (
-      <form onSubmit={handleSubmit(onSubmit)} className='w-full'>
+      <form onSubmit={onSubmit} className='w-full'>
         <div className='flex flex-col md:flex-row mb-4 justify-stretch space-y-4 md:space-y-0 md:space-x-6'>
           <div className='flex flex-col justify-stretch md:w-1/2'>
             <div className='flex justify-between items-end'>
@@ -34,7 +53,7 @@ export const Contact = () => {
               )}
             </div>
             <input 
-              type="text" 
+              type="text"
               placeholder='Full Name' 
               className=' rounded-md border-2 border-white bg-white py-3 px-6 outline-none focus:border-[#175873] text-[#0C1446]'
               {...register('name', {required: 'Name is required'})}

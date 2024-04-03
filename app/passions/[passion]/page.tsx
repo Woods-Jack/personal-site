@@ -1,5 +1,8 @@
 import { passions } from "@/constants/passions";
 import { Metadata, ResolvingMetadata } from 'next';
+import { client } from "@/sanity/lib/client";
+import { postsByCategory } from "@/sanity/lib/queries";
+import PostList from "@/components/common/Posts/PostList";
 
 type PassionProps = {
   params: { passion: string }
@@ -13,9 +16,14 @@ export async function generateMetadata({ params }: PassionProps, parent: Resolvi
   }
 } 
  
-export default function PassionPage({ params }: PassionProps) {
+export default async function PassionPage({ params }: PassionProps) {
   const findPassion = passions.filter((passion) => passion.slug === params.passion);
   const passion = findPassion[0];
+
+  const selectedCategory = passion.title//.toLowerCase().replaceAll(' ','');
+  console.log('CATEGORY', selectedCategory);
+  const posts = await client.fetch(postsByCategory, { selectedCategory });
+  console.log('posts', posts);
 
   return (
   <main className="pt-24">
@@ -23,7 +31,9 @@ export default function PassionPage({ params }: PassionProps) {
       {passion ? 
         <>
           <h1>{passion.title}</h1> 
-          <p>This page is under construction...</p>
+          <p>{passion?.desc}</p>
+          <h2>Recent blog posts for {passion.title}</h2>
+          <PostList posts={posts} />
         </>
       : 
         <h1>Page Not Found</h1>

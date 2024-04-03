@@ -70,7 +70,7 @@ export const cv = {
             content: [
                 {
                     title: 'Presenting / Public Speaking',
-                    desc: 'I thoroughly enjoy delivering presentations and showcasing work to both technical and non-technical audiences. I take particular pride in being able to communicate technical content in an engaging and relevant way to clients or the general public. My experience in theatre has given me extensive practise performing in front of large audiences.',
+                    desc: 'I thoroughly enjoy delivering presentations and showcasing work to both technical and non-technical audiences. I take particular pride in being able to communicate technical content in an engaging and relevant way irrespective of the audience\'s background. My experience in theatre has given me extensive practise performing in front of large audiences.',
                 },
                 {
                     title: '',
