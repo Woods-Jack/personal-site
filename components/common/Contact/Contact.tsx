@@ -18,7 +18,7 @@ export const Contact = () => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-    const accessKey = process.env.WEB3FORMS_ACCESS_KEY || ""
+    const accessKey = process.env.WEB3FORMS_ACCESS_KEY ?? ""
     formData.append("access_key", accessKey);
 
     const response = await fetch("https://api.web3forms.com/submit", {
