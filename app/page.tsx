@@ -7,9 +7,8 @@ import { Contact } from "@/components/common/Contact/Contact";
 
 export default async function Home() {
   return (
-    <>
       <main className="flex min-h-screen w-screen flex-col items-center justify-between">
-        <div className="flex flex-col md:flex-row h-screen w-full md:justify-center md:space-x-10 space-y-10 items-center py-8 md:py-24 md:px-8 xl:px-24">
+        <div id="" className="flex flex-col md:flex-row h-screen w-full md:justify-center md:space-x-10 space-y-10 items-center py-8 md:py-24 md:px-8 xl:px-24 scroll-smooth">
           <div className="relative h-fit w-min text-center md:text-right flex flex-col justify-center md:justify-end md:items-end">
             <Avatar />
             <h1 className="text-9xl z-10">Jack Woods</h1>
@@ -23,7 +22,8 @@ export default async function Home() {
           </div>
         </div>
         <div className="w-full bg-light-sec">
-          <div id="about" className="max-w-[1200px] w-full mx-auto flex flex-col md:flex-row items-stretch md:space-x-2 h-full">
+          <div id="about" className="scroll-smooth" style={{ marginTop: '-80px', height: '80px', visibility: 'hidden' }}></div>
+          <div className="max-w-[1200px] w-full mx-auto flex flex-col md:flex-row items-stretch md:space-x-2 h-full">
             <div className="flex flex-col w-full md:w-1/2 px-4 my-6 items-center md:items-start">
               <h2>Welcome</h2>
               <p>
@@ -32,9 +32,10 @@ export default async function Home() {
                 This site acts as a space to share some of my experience, projects and passions.
               </p>
               <p>
-                I studied computer science at A-Level and upon beginning my degree quickly realised that it was a relatively unique skill amongst Mechanical Engineers. 
-                As part of my industry year at a building consultancy, I became part of a new smart buildings team and used these skills to write functions in specialist software to find inefficienes in building sensor data. 
-                I discovered how much I enjoyed using software to solve problems and found a software engineering internship at a digital consultancy in London - the rest is history!
+                I am a full stack engineer specialising in NextJS / Typescript applications, with a hunger to continue to learn new technologies as my career progresses.
+                My driver for the work I do is solving real problems using technology to make the world a slightly better place for us all. 
+                I love working with people to understand their needs and challenges to inform the work I do. 
+                Click through to my CV to find out more about my experience and skills. If you want to get in touch, you can reach me at the <a href="#contact" className="underline">contact form below.</a>
               </p>
             </div>
             <div className="relative md:w-1/2 md:min-h-fit min-h-[60vh]">
@@ -73,6 +74,5 @@ export default async function Home() {
           </div>
         </div>
       </main>
-    </>
   )
 }
