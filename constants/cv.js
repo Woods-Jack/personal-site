@@ -10,7 +10,7 @@ export const cv = {
                     title: 'Publicis Sapient',
                     subtitle: 'Associate Software Engineer',
                     date: 'October 2022 - Present',
-                    desc: 'Software engineer for a technology consultancy firm as part of a graduate programme. Have spent the majority of my time working with front-end technologies for a large UK retail client eCommerce platform. Liaised with client UX / Product Managers and Senior Engineering leads to develop pages, components, unit tests and mock APIs. Also carried out Web Accessibility reviews and Performance POCs as part of the project release phase.'
+                    desc: 'Software engineer for a technology consultancy firm as part of a graduate programme. Working as a fullstack NextJS / Typescript engineer, specialising in Front-End technologies such as React. Built solutions for large-scale retail clients, liaising with Product Managers and UX Designers to build user journeys. Used Generative AI solutions to create several internal accelerators and tools, using Langchain as an orchestrator and vector databases for document retrieval.'
                 },
                 {
                     title: 'Publicis Sapient',
@@ -70,7 +70,7 @@ export const cv = {
             content: [
                 {
                     title: 'Presenting / Public Speaking',
-                    desc: 'I thoroughly enjoy delivering presentations and showcasing work to both technical and non-technical audiences. I take particular pride in being able to communicate technical content in an engaging and relevant way irrespective of the audience\'s background. My experience in theatre has given me extensive practise performing in front of large audiences.',
+                    desc: 'My time in musical theatre and stage management at University has given me a unique love for presenting work in an engaging way, with extensive experience presenting to large audiences. I take particular pride in being able to communicate technical content in an engaging and relevant way irrespective of the audience\'s background.',
                 },
                 {
                     title: '',

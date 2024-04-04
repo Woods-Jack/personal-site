@@ -12,8 +12,8 @@ export default function CVPage() {
   return(
     <main className='pt-24'>
       <div className='max-w-[1400px] flex flex-col md:mx-auto mx-4 justify-center'>
-        <h1 className='md:px-4'>CV | Jack Woods</h1>
-        <p className='md:px-4'>
+        <h1 className='md:px-4 mb-4'>CV | Jack Woods</h1>
+        <p className='md:px-4 mb-8'>
           For full contact details or a PDF copy of my CV, reach out to me&nbsp;
             <a href='/#contact' target='_blank' className='text-[#ff709c] underline'>using the contact form</a>
           , or&nbsp;
