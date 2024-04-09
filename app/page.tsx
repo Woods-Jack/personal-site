@@ -50,14 +50,14 @@ export default async function Home() {
               This site also acts as a place to share projects and work from areas of my life beyond my career.
               Click through below to find out about some of the things I enjoy doing outside of work.
             </p>
-            <div className="w-full flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-4 my-4 justify-between items-center">
+            <div className="w-full flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-4 my-4 justify-between items-stretch">
               {passions.map((passion) => (
                 <CardRow 
                   key={passion.title} 
                   title={passion.title} 
                   img={passion.img} 
+                  desc={passion.desc}
                   ctaText='Read More' 
-                  href={`/passions/${passion.slug}`}
                 />
               ))}
             </div>

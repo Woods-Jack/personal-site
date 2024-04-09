@@ -54,6 +54,8 @@ export const Contact = () => {
             </div>
             <input 
               type="text"
+              aria-label='name'
+              id='name'
               placeholder='Full Name' 
               className=' rounded-md border-2 border-white bg-white py-3 px-6 outline-none focus:border-[#175873] text-[#0C1446]'
               {...register('name', {required: 'Name is required'})}
@@ -68,7 +70,9 @@ export const Contact = () => {
             </div>
             <input 
               type="text" 
-              placeholder='example@domain.com' 
+              placeholder='example@domain.com'
+              aria-label='E-mail address' 
+              id='email'
               className=' rounded-md border-2 border-white bg-white py-3 px-6 outline-none focus:border-[#175873] text-[#0C1446]'
               {...register('email', 
                 {
@@ -92,6 +96,8 @@ export const Contact = () => {
           <textarea
             rows={4}
             placeholder='Add your message here...' 
+            aria-label='message'
+            id='message'
             className=' rounded-md border-2 border-white bg-white py-3 px-6 outline-none focus:border-[#175873] resize-none text-[#0C1446]'
             {...register('message', {required: 'Add your message here before submitting'})}
           />
