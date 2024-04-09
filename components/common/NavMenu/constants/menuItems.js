@@ -8,11 +8,11 @@ export const menuItems =  [
       slug: '/cv',
     },
     {
-      title: 'Projects',
-      slug: '/projects',
-    },
-    {
       title: 'Blog',
       slug: '/blog',
+    },
+    {
+      title: 'Get In Touch',
+      slug: '/#contact',
     },
 ];
