@@ -24,11 +24,12 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
+  overflow-x: hidden;
   background: rgb(var(--background-rgb));
   font-family: var(--font-nunito);
   @media (min-width: theme('screens.md')) {
     font-size: larger;
-  }
+  };
 }
 
 .light-title {
