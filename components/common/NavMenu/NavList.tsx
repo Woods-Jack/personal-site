@@ -26,7 +26,7 @@ const NavList = ({isMobile}:NavListProps) => {
           {menuItems.map((item) => (
             <li key={item.title}>
               <Link href={item.slug}>
-                <span className={listStyles}>{item.title}</span>
+                <p className={listStyles}>{item.title}</p>
               </Link>
             </li>
           ))}
