@@ -8,7 +8,7 @@ import { client } from "@/sanity/lib/client";
 export async function generateStaticParams() {
   // Important, use the plain Sanity Client here
   const posts = await client.fetch(postPathsQuery);
-  posts[0].params.slug = `blog/${posts[0].params.slug}`;
+  posts[0].params.slug = `blog/${posts[0]?.params?.slug}`;
 
   return posts;
 }
