@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faXTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import getCurrentYear from '@/utils/getCurrentYear';
 
 const Footer = () => {

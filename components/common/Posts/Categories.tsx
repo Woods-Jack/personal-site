@@ -5,7 +5,7 @@ import { SanityDocument } from '@sanity/client';
 
 interface CategoriesProps {
   list: SanityDocument[] | null;
-  filterCb: (category?: string) => void;
+  filterCb: (_category?: string) => void;
 }
 
 const Categories = ({list, filterCb}: CategoriesProps) => {

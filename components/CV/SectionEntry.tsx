@@ -1,5 +1,4 @@
 import { SectionEntryProps } from "./CV.type"
-import Markdown from "react-markdown"
 
 export const SectionEntry = ({title, subtitle, date, desc}: SectionEntryProps) => {
     return(

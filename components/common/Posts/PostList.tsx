@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { SanityDocument } from "@sanity/client";
 import { CardStack } from "../Card/CardStack";
 import { getImageUrl } from "@/utils/getImageUrl";

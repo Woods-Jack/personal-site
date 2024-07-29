@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 }
 
 export default function CVPage() {
-  const {header, sections} = cv;
+  const { sections } = cv;
 
   return(
     <main className='pt-24'>
@@ -21,7 +21,7 @@ export default function CVPage() {
           .
         </p>
         <div className='flex flex-col space-y-4 mb-4'>
-          {sections.map((section, index) => (
+          {sections.map((section) => (
               <CVSection key={section.header} header={section.header} content={section.content} />
           ))}
         </div>
