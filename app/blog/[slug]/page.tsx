@@ -8,14 +8,13 @@ import { client } from "@/sanity/lib/client";
 export async function generateStaticParams() {
   // Important, use the plain Sanity Client here
   const posts = await client.fetch(postPathsQuery);
-  posts[0].params.slug = `blog/${posts[0]?.params?.slug}`;
+  if(posts.length > 0) posts[0].params.slug = `blog/${posts[0]?.params?.slug}`;
 
   return posts;
 }
 
-export default async function Page({ params }: { params: any }) {
+export default async function Page({ params }: { params?: any }) {
   const post = await sanityFetch<SanityDocument>({ query: postQuery, params });
-  console.log('______post', post);
   return(
   <main className="pt-24">
      <div className='w-full'>
