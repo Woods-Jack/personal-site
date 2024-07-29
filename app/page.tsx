@@ -11,7 +11,7 @@ export default async function Home() {
     <main className="flex min-h-screen w-screen flex-col items-center justify-between">
       <div
         id=""
-        className="flex flex-col md:flex-row h-screen w-full md:justify-center md:space-x-10 space-y-10 items-center py-8 md:py-24 md:px-8 xl:px-24 scroll-smooth"
+        className="flex flex-col md:flex-row min-h-screen md:h-screen overflow-hidden w-full md:justify-center md:space-x-10 space-y-10 items-center py-8 md:py-24 md:px-8 xl:px-24 scroll-smooth"
       >
         <div className="relative h-fit w-min text-center md:text-right flex flex-col justify-center md:justify-end md:items-end">
           <Avatar />
