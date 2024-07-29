@@ -3,8 +3,9 @@ import { SectionEntry } from "./SectionEntry"
 
 export const CVSection = ({header, content}: CVSectionProps) => {
     return(
-    <div className="md:px-4 md:mx-4 bg-light-sec rounded-lg">
-        <h2 className="md:text-5xl text-4xl mt-4 mx-2 text-center md:text-left">{header}</h2>
+    <div className="md:mx-4 md:py-2">
+        <h2 className="md:text-4xl text-4xl mx-2 text-centertext-left">{header}</h2>
+        <div className="bg-light-sec rounded-xl md:p-4 xs: pt-4">
         {content.map((entry) => (
             <SectionEntry 
                 key={entry.title} 
@@ -14,6 +15,7 @@ export const CVSection = ({header, content}: CVSectionProps) => {
                 date={entry.date} 
             />
         ))}
+        </div>
     </div>
     )
 }

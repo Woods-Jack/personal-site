@@ -12,14 +12,20 @@ export default function CVPage() {
   return(
     <main className='pt-24'>
       <div className='max-w-[1400px] flex flex-col md:mx-auto mx-4 justify-center'>
-        <h1 className='md:px-4 mb-4'>CV | Jack Woods</h1>
-        <p className='md:px-4 mb-8'>
-          For full contact details or a PDF copy of my CV, reach out to me&nbsp;
-            <a href='/#contact' target='_blank' className='text-[#ff709c] underline'>using the contact form</a>
-          , or&nbsp;
-            <a href="https://www.linkedin.com/in/jack-woods-london/" target='_blank' className='text-[#ff709c] underline'>connect with me on LinkedIn</a>
+        <div className='md:px-4'>
+        <h1 className='mb-4'>My CV</h1>
+        <p>
+          If you would like a copy for your records, feel free to download a copy&nbsp; 
+            <a href='/#contact' target='_blank' className='text-[#ff709c] underline'>by clicking here</a>
+          . 
+        </p>
+        <p >
+        If you are interested in a copy of this CV with full contact details, please&nbsp;
+            <a href="https://www.linkedin.com/in/jack-woods-london/" target='_blank' className='text-[#ff709c] underline'>reach out to me on LinkedIn</a>
           .
         </p>
+        </div>
+       
         <div className='flex flex-col space-y-4 mb-4'>
           {sections.map((section) => (
               <CVSection key={section.header} header={section.header} content={section.content} />
