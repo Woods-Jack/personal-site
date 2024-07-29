@@ -27,7 +27,7 @@ export const techIcons = [
 
 export const miniTechIcons = [
   {
-    title: "JavaSdript",
+    title: "JavaScript",
     img: {
       src: '/logos/javascript.svg',
       alt: 'JavaScript Logo'

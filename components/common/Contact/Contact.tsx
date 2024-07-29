@@ -12,13 +12,13 @@ type FormData = {
 
 export const Contact = () => {
   const {register, formState: { errors }} = useForm<FormData>(); 
-  const [responseMsg, setResponseMsg] = useState<string|undefined>()
+  const [responseMsg, setResponseMsg] = useState<string|undefined>();
 
   async function onSubmit(e:any) {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-    const accessKey = process.env.WEB3FORMS_ACCESS_KEY ?? ""
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY as string;
     formData.append("access_key", accessKey);
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -41,7 +41,6 @@ export const Contact = () => {
       <div className='mx-auto mt-2 py-8 px-4 flex items-center bg-light rounded-2xl'>
         <p className='mb-0'>{responseMsg}</p>
       </div>
-      
     ) : (
       <form onSubmit={onSubmit} className='w-full'>
         <div className='flex flex-col md:flex-row mb-4 justify-stretch space-y-4 md:space-y-0 md:space-x-6'>
