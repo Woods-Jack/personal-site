@@ -26,4 +26,4 @@ export const passions = [
     slug: 'theatre',
     desc: 'I spent all my free time at University stage managing and performing in musicals, and continue to find opportunities to watch and be part of theatre whenever I can. I love using the skills I have gained in the work that I do.'
   },
-]
+];

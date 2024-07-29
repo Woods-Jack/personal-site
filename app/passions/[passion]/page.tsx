@@ -1,5 +1,5 @@
 import { passions } from "@/constants/passions";
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata} from 'next';
 import { client } from "@/sanity/lib/client";
 import { postsByCategory } from "@/sanity/lib/queries";
 import PostList from "@/components/common/Posts/PostList";
@@ -8,7 +8,7 @@ type PassionProps = {
   params: { passion: string }
 }
 
-export async function generateMetadata({ params }: PassionProps, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: PassionProps): Promise<Metadata> {
   const passion = params.passion;
 
   return {
