@@ -5,8 +5,8 @@ import { Contact } from "@/components/common/Contact/Contact";
 import { miniTechIcons, techIcons } from "@/constants/techIcons";
 import { TechIcon } from "@/components/common/TechIcon";
 import TechIconMini from "@/components/common/TechIconMini";
-import { CardRow } from "@/components/common/Card/CardRow";
-import { projects } from "@/constants/projects";
+// import { CardRow } from "@/components/common/Card/CardRow";
+// import { projects } from "@/constants/projects";
 import { CardStack } from "@/components/common/Card/CardStack";
 import { passions } from "@/constants/passions";
 
