@@ -9,6 +9,7 @@ import TechIconMini from "@/components/common/TechIconMini";
 // import { projects } from "@/constants/projects";
 import { CardStack } from "@/components/common/Card/CardStack";
 import { passions } from "@/constants/passions";
+import  JackGPT from "@/components/JackGPT";
 
 export default async function Home() {
   return (
@@ -196,6 +197,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
+      <JackGPT />
     </main>
   );
 }
