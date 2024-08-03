@@ -1,4 +1,4 @@
-import { passions } from "@/constants/passions";
+import { passions } from "@/constants/projects";
 import { CardStack } from "@/components/common/Card/CardStack";
 import { Metadata } from "next";
 

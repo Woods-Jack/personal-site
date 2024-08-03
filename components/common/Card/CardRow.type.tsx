@@ -4,7 +4,7 @@ export interface CardRowProps {
     src: string;
     alt: string;
   };
-  ctaText: string;
+  ctaText?: string;
   href?: string;
   date?: string;
   desc?: string;

@@ -1,4 +1,4 @@
-import { passions } from "@/constants/passions";
+import { passions } from "@/constants/projects";
 import { Metadata} from 'next';
 import { client } from "@/sanity/lib/client";
 import { postsByCategory } from "@/sanity/lib/queries";
