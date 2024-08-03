@@ -5,6 +5,9 @@ import { Contact } from "@/components/common/Contact/Contact";
 import { miniTechIcons, techIcons } from "@/constants/techIcons";
 import { TechIcon } from "@/components/common/TechIcon";
 import TechIconMini from "@/components/common/TechIconMini";
+import { CardRow } from "@/components/common/Card/CardRow";
+import { projects } from "@/constants/projects";
+import { CardStack } from "@/components/common/Card/CardStack";
 
 export default async function Home() {
   return (
@@ -110,37 +113,75 @@ export default async function Home() {
           </p>
         </div>
       </div>
-            
       <div className="mb-8 px-4 max-w-[1200px]">
         <div className="bg-light-sec rounded-2xl flex flex-col md:flex-row items-stretch md:space-x-2">
-        <div className="relative md:w-1/3 md:min-h-fit min-h-[60vh]">
-          <Image
-            src="/presentation.jpg"
-            alt="Portrait of Jack Woods in front of Niagara Falls"
-            fill={true}
-            className="object-cover rounded-2xl"
-          />
-        </div>
-        <div className="flex flex-col w-full md:w-2/3 px-4 my-6 items-center md:items-start">
-          <h3>I love speaking to people!</h3>
-          <p>
-            I take pride in my ability to deliver technical content in an easy
-            to understand and engaging way. I love getting people excited about
-            technology by focussing on the real world impact over complex
-            jargon.
-          </p>
-          <p>
-            Much of my free time at University was spent doing theatre and
-            musical theatre, and I take every opportunity to bring the skills I
-            learnt here into the work I do in software. I believe there is a
-            real value to getting <span className="italic">everyone</span>{" "}
-            excited about tech and how it can change our lives, not just us
-            lucky few who get to work in the industry.
-          </p>
-        </div>
+          <div className="relative md:w-1/3 md:min-h-fit min-h-[60vh]">
+            <Image
+              src="/presentation.jpg"
+              alt="Portrait of Jack Woods in front of Niagara Falls"
+              fill={true}
+              className="object-cover rounded-2xl"
+            />
+          </div>
+          <div className="flex flex-col w-full md:w-2/3 px-4 my-6 items-center md:items-start">
+            <h3>I love speaking to people!</h3>
+            <p>
+              I take pride in my ability to deliver technical content in an easy
+              to understand and engaging way. I love getting people excited
+              about technology by focussing on the real world impact over
+              complex jargon.
+            </p>
+            <p>
+              Much of my free time at University was spent doing theatre and
+              musical theatre, and I take every opportunity to bring the skills
+              I learnt here into the work I do in software. I believe there is a
+              real value to getting <span className="italic">everyone</span>{" "}
+              excited about tech and how it can change our lives, not just us
+              lucky few who get to work in the industry.
+            </p>
+          </div>
         </div>
       </div>
-
+      <div className="w-full mb-4">
+        <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col md:space-x-2 h-full">
+          <h2>Personal Projects</h2>
+          <p>
+            Applying the skills I learn at work to my own interests is a lot of fun and allows to me to broaden my skillset 
+          </p>
+          <div className="flex flex-col md:flex-row gap-4">
+            {projects.map((project) => (
+              <CardRow
+                key={project.title}
+                title={project.title}
+                img={project.img}
+                desc={project.desc}
+                href={"/"}
+                ctaText="Find out more"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="w-full mb-4">
+        <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col md:space-x-2 h-full">
+          <h2>Personal Projects</h2>
+          <p>
+            Applying the skills I learn at work to my own interests, as well as
+            learning new skills to further my learning, is an important part of
+            my
+          </p>
+          <div className="flex flex-col gap-4">
+            {projects.map((project) => (
+              <CardStack
+                key={project.title}
+                title={project.title}
+                img={project.img}
+                desc={project.desc}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="w-full bg-light-sec">
         <div
           id="contact"
