@@ -14,9 +14,34 @@ export interface IMessage {
     content: string;
 }
 
+
+
 const ChatWindow = ({ closeChatCb }: IChatWindow) => {
     const [messages, setMessages] = useState<IMessage[]>([{ type: 'chatbot', content: INIT_MESSAGE}]);
     const [isLoading, setIsLoading] = useState<boolean>(false);
+
+    const getChatbotResponse = async (msg: string) => {
+        const res = await fetch('/api/chat', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: msg }),
+        });
+        const json = await res.json();
+    
+        if (res.ok) {
+            console.log('json', json);
+            messages.pop(); 
+            setMessages((currentMessages) => {
+                const updatedMessages: IMessage[] = [...currentMessages];
+                updatedMessages.pop();
+                return [...updatedMessages, { type: 'chatbot', content: json.kwargs.content }];
+            });
+        } else {
+            console.log('error', json);
+        }
+    };
 
     const addMsgOnEnter = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
         if (e.key === "Enter" && inputRef.current?.value) {
@@ -26,14 +51,8 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
             inputRef.current.value = "";
             setIsLoading(true);
             setMessages((currentMessages) => [...currentMessages, { type: 'chatbot', content: '...' }]);
-            setTimeout(() => {
-                setIsLoading(false);
-                setMessages((currentMessages) => {
-                    const updatedMessages = [...currentMessages];
-                    updatedMessages.pop(); // Remove the typing indicator
-                    return [...updatedMessages, { type: 'chatbot', content: 'Chatbot response here.' }];
-                });
-            }, 2000); // Delay for 2 seconds
+            getChatbotResponse(newMsg);
+            setIsLoading(false);
         }
     };
 
