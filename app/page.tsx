@@ -5,9 +5,10 @@ import { Contact } from "@/components/common/Contact/Contact";
 import { miniTechIcons, techIcons } from "@/constants/techIcons";
 import { TechIcon } from "@/components/common/TechIcon";
 import TechIconMini from "@/components/common/TechIconMini";
-import { CardRow } from "@/components/common/Card/CardRow";
-import { projects } from "@/constants/projects";
+// import { CardRow } from "@/components/common/Card/CardRow";
+// import { projects } from "@/constants/projects";
 import { CardStack } from "@/components/common/Card/CardStack";
+import { passions } from "@/constants/passions";
 
 export default async function Home() {
   return (
@@ -142,7 +143,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full mb-4">
+      {/* <div className="w-full mb-4">
         <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col md:space-x-2 h-full">
           <h2>Personal Projects</h2>
           <p>
@@ -161,22 +162,20 @@ export default async function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="w-full mb-4">
         <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col md:space-x-2 h-full">
-          <h2>Personal Projects</h2>
+          <h2>When I&apos;m not programming...</h2>
           <p>
-            Applying the skills I learn at work to my own interests, as well as
-            learning new skills to further my learning, is an important part of
-            my
+            I have a number of hobbies and interests outside of programming - check out a few of them below!
           </p>
           <div className="flex flex-col gap-4">
-            {projects.map((project) => (
+            {passions.map((passion) => (
               <CardStack
-                key={project.title}
-                title={project.title}
-                img={project.img}
-                desc={project.desc}
+                key={passion.title}
+                title={passion.title}
+                img={passion.img}
+                desc={passion.desc}
               />
             ))}
           </div>
