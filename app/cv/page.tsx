@@ -11,7 +11,7 @@ export default function CVPage() {
 
   return(
     <main className='pt-24'>
-      <div className='max-w-[1400px] flex flex-col md:mx-auto mx-4 justify-center'>
+      <div className='max-w-[1200px] flex flex-col md:mx-auto mx-4 justify-center'>
         <div className='md:px-4'>
         <h1 className='mb-4'>My CV</h1>
         <p>
