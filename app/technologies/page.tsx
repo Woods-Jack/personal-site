@@ -1,4 +1,4 @@
-import { miniTechIcons, techIcons } from "@/constants/techIcons";
+import { miniTechIcons } from "@/constants/techIcons";
 import Image from "next/image";
 
 export default async function Technologies() {
