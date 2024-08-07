@@ -48,3 +48,5 @@ clean_docs = get_docs_from_html(page_html)
 
 vectorstore.delete(delete_all=True)
 vectorstore.add_documents(clean_docs)
+
+print("Successfully ingested site data to pinecone")
