@@ -27,7 +27,7 @@ jobs:
 
     - name: Install Playwright
       run: |
-        playwright install
+        playwright install chromium
 
     - name: Run Python script
       run: python services/python/ingestion.py
