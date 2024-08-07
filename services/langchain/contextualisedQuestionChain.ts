@@ -6,10 +6,14 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 import initModel from "./init";
 
 
-const contextualizeQSystemPrompt = `Given a chat history and the latest user question
-which might reference context in the chat history, formulate a standalone question
-which can be understood without the chat history. DO NOT answer the question, simply
-create a contextualised question based on the chat history.`
+const contextualizeQSystemPrompt = `
+  You are an AI assistant who is an expert at adding context to questions.
+  You will be given a chat history with a final user question.
+  Your job is to add context to that question, using the chat history, so that the question makes sense standalone.
+  You should also provide a list of synonymous semantic keywords for that question after the question to improve vector searching.
+  Do NOT answer the question. Your job is only to rephrase the question to add context.
+  If the question already makes sense in isolation, do not rephrase the question.
+`
 
 const contextualizeQPrompt = ChatPromptTemplate.fromMessages([
   ["system", contextualizeQSystemPrompt],

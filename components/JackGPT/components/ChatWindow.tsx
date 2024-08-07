@@ -5,7 +5,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import MessageContainer from "./MessageContainer";
 import { INIT_MESSAGE } from "@/constants/jack-gpt";
-import { useEffect, useRef, useState } from "react";
+import {  useEffect, useRef, useState } from "react";
 import { IMessage, MESSAGE_TYPE } from "../JackGPT.types";
 
 interface IChatWindow {
@@ -18,6 +18,17 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
   ]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const appendResponseMsg = (isError: boolean, content: string) => {
+    setMessages((currentMessages) => {
+      const updatedMessages: IMessage[] = [...currentMessages];
+      updatedMessages.pop();
+      return [
+        ...updatedMessages,
+        { type: isError ? MESSAGE_TYPE.SYS : MESSAGE_TYPE.CHATBOT, content: content },
+      ];
+    });
+  }
+
   const getChatbotResponse = async (userInput: string) => {
     const messageHistory: IMessage[] = [...messages];
     setMessages((currentMessages) => {
@@ -27,7 +38,6 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
         { type: MESSAGE_TYPE.SYS, content: "..." },
       ])
     });
-
     const res = await fetch("/api/chat", {
       method: "POST",
       headers: {
@@ -38,17 +48,9 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
     const json = await res.json();
 
     if (res.ok) {
-      console.log("json", json);
-      setMessages((currentMessages) => {
-        const updatedMessages: IMessage[] = [...currentMessages];
-        updatedMessages.pop();
-        return [
-          ...updatedMessages,
-          { type: MESSAGE_TYPE.CHATBOT, content: json.kwargs.content },
-        ];
-      });
+      appendResponseMsg(false, json.kwargs.content);
     } else {
-      console.log("error", json);
+      appendResponseMsg(true, `ERROR: ${json.error}`);
     }
   };
 
@@ -57,7 +59,6 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
       e.preventDefault();
       const newMsg = inputRef.current?.value;
       setIsLoading(true);
-
       inputRef.current.value = "";
       await getChatbotResponse(newMsg);
       setIsLoading(false);
@@ -65,6 +66,13 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
   };
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  // Once the application has finished loading, re-focus on the input field
+  useEffect(() => {
+    if(!isLoading && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isLoading]);
 
   return (
     <div className="flex flex-col">

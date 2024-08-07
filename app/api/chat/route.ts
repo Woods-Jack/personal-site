@@ -1,12 +1,8 @@
 import { z } from "zod";
 import { NextRequest, NextResponse } from "next/server";
-import { HumanMessage } from "@langchain/core/messages";
 import { MESSAGE_TYPE } from "@/components/JackGPT/JackGPT.types";
 import { buildChatHistory, removeSysMessages } from "@/utils/messageUtils";
-import { contextualizeQChain } from "@/services/langchain/contextualisedQuestionChain";
-import initModel from "@/services/langchain/init";
-import { conversationalQAChain } from "@/services/langchain/conversationalQAChain";
-
+import { ragChain } from "@/services/langchain/ragChain";
 
 const messageSchema = z.object({
   type: z.nativeEnum(MESSAGE_TYPE),
@@ -16,29 +12,34 @@ const messageSchema = z.object({
 const chatSchema = z.object({
   history: z.array(messageSchema),
   userInput: z.string(),
+  mockResponse: z.boolean().optional(),
 });
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { userInput, history } = chatSchema.parse(body);
+    const { userInput, history, mockResponse } = chatSchema.parse(body);
     const historyWithoutSysMessages = removeSysMessages(history);
-    const formattedHistory = buildChatHistory(historyWithoutSysMessages);
+    const formattedHistory = buildChatHistory(
+      historyWithoutSysMessages.slice(-4)
+    );
 
-    if (historyWithoutSysMessages.length > 0) {
-     
-      // if (formattedHistory) {
-      //   refinedQuestion = await contextualizeQChain.invoke({
-      //     chat_history: formattedHistory,
-      //     question: userInput,
-      //   });
+    const res = mockResponse
+    ? await new Promise((resolve) => {
+      setTimeout(
+        () => resolve({
+          kwargs: {
+            content: "This is a mocked chat response",
+          },
+        }),
+        3000
+      );
+    })
+      : await ragChain.invoke({
+          question: userInput,
+          chat_history: formattedHistory,
+        });
 
-        
-      }
-
-    
-    const res = await conversationalQAChain.invoke({ question: userInput, chat_history: formattedHistory })
-    
     return NextResponse.json(res);
   } catch (e: any) {
     if (e instanceof z.ZodError) {
