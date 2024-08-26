@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   const posts = await client.fetch(postPathsQuery);
   if(posts.length > 0) posts[0].params.slug = `blog/${posts[0]?.params?.slug}`;
 
-  return posts;
+  return posts ?? null;
 }
 
 export default async function Page({ params }: { params?: any }) {
