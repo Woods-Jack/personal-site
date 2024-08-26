@@ -7,4 +7,4 @@ export enum MESSAGE_TYPE {
 export interface IMessage {
   type: MESSAGE_TYPE;
   content: string;
-}
+} 

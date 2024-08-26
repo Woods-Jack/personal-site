@@ -6,7 +6,7 @@
   --foreground-rgb: 12, 20, 70;
   --foreground-secondary: 23, 88, 115;
   --background-rgb: 245, 239, 231;
-   --background-secondary: 231, 218, 207 /* 216, 196, 182; */
+  --background-secondary: 231, 218, 207 /* 216, 196, 182; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -87,8 +87,9 @@ h4 {
 }
 
 p {
-  font-size: 1.25rem;
-  margin-bottom: 8px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.125rem;
 }
 
 .avatar-wrapper {

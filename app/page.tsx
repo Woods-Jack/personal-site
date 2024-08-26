@@ -5,11 +5,11 @@ import { Contact } from "@/components/common/Contact/Contact";
 import { miniTechIcons, techIcons } from "@/constants/techIcons";
 import { TechIcon } from "@/components/common/TechIcon";
 import TechIconMini from "@/components/common/TechIconMini";
-// import { CardRow } from "@/components/common/Card/CardRow";
-// import { projects } from "@/constants/projects";
 import { CardStack } from "@/components/common/Card/CardStack";
 import { passions } from "@/constants/passions";
 import  JackGPT from "@/components/JackGPT";
+//import { projects } from "@/constants/projects";
+//import { CardRow } from "@/components/common/Card/CardRow";
 
 export default async function Home() {
   return (
@@ -89,7 +89,7 @@ export default async function Home() {
             and web apps for personal and commercial use. My most commonly used
             technologies are:
           </p>
-          <div className="md:px-16 mb-4 w-full flex flex-col md:flex-row my-4 md:space-x-4 space-y-4 md:space-y-0 justify-between items-stretch">
+          <div className="w-full flex flex-col md:flex-row mt-4 mb-8 gap-8 justify-between items-stretch">
             {techIcons.map((tech) => (
               <TechIcon key={tech.img.alt} img={tech.img} desc={tech.desc} />
             ))}
@@ -99,7 +99,7 @@ export default async function Home() {
             and frameworks. Click on one of the icons below to learn more about
             my experience in the relevant area.
           </p>
-          <div className="my-4 flex flex-row flex-wrap gap-16 md:space-x-8 md:justify-center justify-around">
+          <div className="mt-4 mb-8 flex flex-row flex-wrap gap-16 md:justify-center justify-around">
             {miniTechIcons.map((tech) => (
               <TechIconMini
                 key={tech.img.alt}
@@ -145,7 +145,7 @@ export default async function Home() {
         </div>
       </div>
       {/* <div className="w-full mb-4">
-        <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col md:space-x-2 h-full">
+        <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col h-full">
           <h2>Personal Projects</h2>
           <p>
             Applying the skills I learn at work to my own interests is a lot of fun and allows to me to broaden my skillset 
@@ -157,20 +157,20 @@ export default async function Home() {
                 title={project.title}
                 img={project.img}
                 desc={project.desc}
-                href={"/"}
+                href={`/projects/${project.slug}`}
                 ctaText="Find out more"
               />
             ))}
           </div>
         </div>
       </div> */}
-      <div className="w-full mb-4">
-        <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col md:space-x-2 h-full">
+      <div className="w-full mb-8">
+        <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col h-full">
           <h2>When I&apos;m not programming...</h2>
           <p>
             I have a number of hobbies and interests outside of programming - check out a few of them below!
           </p>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-8 my-4">
             {passions.map((passion) => (
               <CardStack
                 key={passion.title}

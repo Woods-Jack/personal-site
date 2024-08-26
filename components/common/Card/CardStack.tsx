@@ -12,8 +12,8 @@ export const CardStack = ({
   const { src, alt } = img;
 
   return (
-    <div className="flex md:flex-row md:min-h-[300px] flex-col w-full justify-between items-stretch bg-light-sec rounded-xl">
-      <div className="flex flex-col justify-between h-full  md:w-3/4 w-full py-2 pl-4">
+    <div className="flex md:flex-row md:min-h-[280px] flex-col w-full justify-between items-stretch bg-light-sec rounded-2xl">
+      <div className="flex flex-col justify-between h-full md:w-3/4 w-full my-6 md:pl-6 px-4">
         <div className="overflow-hidden flex flex-col items-center md:items-start md:pr-4">
           <h3>{title}</h3>
           {date && <em>{date}</em>}
@@ -27,8 +27,8 @@ export const CardStack = ({
           </a>
         )}
       </div>
-      <div className="relative w-full md:w-1/2">
-        <Image src={src} alt={alt} fill className="object-cover" />
+      <div className="relative w-full md:w-1/2 min-h-[280px]">
+        <Image src={src} alt={alt} fill className="object-cover rounded-2xl" />
       </div>
     </div>
   );
