@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export enum MESSAGE_TYPE {
   HUMAN = "human",
   CHATBOT = "chatbot",
