@@ -13,11 +13,11 @@ export interface IImage {
 
 export const TechIcon = ({img, desc}: ITechIcon) => {
   return (
-    <div className="flex flex-1 flex-row md:space-y-2 space-y-0 space-x-2 md:flex-col">
-      <div className="relative h-16 w-16 md:w-full">
-        <Image src={img.src} alt={img.alt} fill className="object-contain pt-2"/>
+    <div className="flex flex-1 flex-row gap-4 md:flex-col bg-light-sec px-6 rounded-xl pt-4">
+      <div className="relative h-16 w-16 ">
+        <Image src={img.src} alt={img.alt} fill className="object-contain"/>
       </div>
-      <p className="text-base flex-1">{desc}</p>
+      <p className="flex-1">{desc}</p>
     </div>
   );
 }

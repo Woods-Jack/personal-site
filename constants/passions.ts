@@ -23,6 +23,6 @@ export const passions: CardRowProps[] = [
         src: '/theatre.jpg',
         alt: 'Jack and cast members singing on stage.',
       },
-      desc: 'I studied GCSE drama and really fell for theatre. I stage managed and lighting designed several productions throughout University, spending most my evenings and weekends in the theatre. In my final year I finally decided to audition for a role in the musical Company and from that moment did every musical theatre event I could until I graduated. I have done some musical theatre courses in London, but would love to get properly back onto the stage with a theatre group soon.'
+      desc: 'I studied GCSE drama and really fell for theatre. I stage managed and lighting designed several productions throughout University, spending most my evenings and weekends in the theatre. In my final year I finally decided to audition for a role in the musical Company and from that moment did every musical theatre event I could until I graduated. I have done some musical theatre courses in London, but would love to get back onto the stage with a theatre group soon.'
     },
   ];

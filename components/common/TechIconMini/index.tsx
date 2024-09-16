@@ -10,7 +10,7 @@ const TechIconMini = ({ img, desc, title }: ITechIcon) => {
   return (
     <>
       <button
-        className="relative h-12 w-12 hover:transform hover:scale-110 transition-transform duration-300"
+        className="relative h-12 w-12 hover:transform hover:scale-125 transition-transform duration-300"
         onClick={() => setShowModal(true)}
       >
         <Image src={img.src} alt={img.alt} fill className="object-contain" />
