@@ -1,7 +1,6 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { client } from '@/sanity/lib/client'
 
-
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
 }
@@ -14,7 +13,7 @@ export const ptComponents = {
       }
       const src = urlFor(value).height(450).fit('max').auto('format').url()
       return (
-        <div className='justify-center flex'>
+        <div className='justify-left flex'>
         <img
           alt={value.alt || ' '}
           loading="lazy"

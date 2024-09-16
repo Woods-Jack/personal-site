@@ -1,22 +1,53 @@
-import { SanityDocument } from "@sanity/types";
-import Posts from "@/components/common/Posts/Posts";
-import { postsQuery, categoriesQuery } from "@/sanity/lib/queries";
-import { sanityFetch } from "@/sanity/lib/sanityFetch";
+import { CardStack } from '@/components/common/Card/CardStack';
+import { client } from '@/sanity/lib/client'
+import { postsQuery } from '@/sanity/lib/queries';
+import { getImageUrl } from '@/utils/getImageUrl';
+import { PortableText } from '@portabletext/react';
+import { Image, PortableTextSpan, SanityDocument } from '@sanity/types';
 
-const BlogPage = async () => {
-  const posts = await sanityFetch<SanityDocument[]>({ query: postsQuery });
-  const categories = await sanityFetch<SanityDocument[]>({ query: categoriesQuery })
+interface IBlog {
+  posts: BlogPost[];
+};
 
-  return(
-    <main className="pt-24">
-      <div className='max-w-[1200px] flex flex-col md:mx-auto mx-4 justify-center'>
-        <h1>Welcome to my Blog</h1>
-        <h2>This page is under construction...</h2>
-        <Posts categories={categories} initPosts={posts} />
+interface BlogPost {
+  title: string;
+  publishedAt: Date;
+  slug: {
+    current: string;
+  }
+  body: PortableTextSpan;
+  mainImage: Image;
+  imageAltText: string;
+  excerpt: string;
+};
+
+
+export default async function Blog() {
+  const posts: BlogPost[] = await client.fetch(postsQuery);
+  const BASE_URL = '/blog/'
+
+  return (
+    <main className='mx-4 pt-24 mb-16'>
+      <div className='max-w-[1024px] flex flex-col md:mx-auto mx-4 justify-center'>
+        <div className='max-w-[768px]'>
+          <h1>My Blog</h1>
+          <p>Welcome to my blog! This is a space for me to share things I'm interested in. Some posts will be about software engineering, while others not so much!  Have a look at some of my latest blog posts below...</p>
+          </div>
+        {posts.map((post) => {
+          const img = {
+            src: getImageUrl(post.mainImage, 400),
+            alt: post.imageAltText,
+          };
+          console.log('img', img)
+          const url = BASE_URL + post.slug.current;
+          return (
+            <CardStack title={post.title} img={img} desc={post.excerpt} href={url} ctaText='Read More'/>
+          )
+        }
+        )}
       </div>
     </main>
-  )
+  );
 }
 
-export default BlogPage;
 export const revalidate = 60;
