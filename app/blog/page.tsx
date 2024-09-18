@@ -10,6 +10,7 @@ interface IBlog {
 };
 
 interface BlogPost {
+  _id: string;
   title: string;
   publishedAt: Date;
   slug: {
@@ -41,7 +42,7 @@ export default async function Blog() {
           console.log('img', img)
           const url = BASE_URL + post.slug.current;
           return (
-            <CardStack title={post.title} img={img} desc={post.excerpt} href={url} ctaText='Read More'/>
+            <CardStack key={post._id} title={post.title} img={img} desc={post.excerpt} href={url} ctaText='Read More'/>
           )
         }
         )}
