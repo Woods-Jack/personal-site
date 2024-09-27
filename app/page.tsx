@@ -197,7 +197,6 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <JackGPT />
     </main>
   );
 }

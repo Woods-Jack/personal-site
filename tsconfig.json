@@ -24,6 +24,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "hooks/useIsVisible.js", "components/common/PTComponents/PTComponents.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "hooks/useIsVisible.js", "components/common/PTComponents/PTComponents.ts"],
   "exclude": ["node_modules"]
 }
