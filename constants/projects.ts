@@ -1,12 +1,12 @@
 export const projects = [
   {
-    title: 'JackGPT',
+    title: 'Project 1',
     img: {
       src: '/f1.jpg',
       alt: 'A Formula 1 car driving through Milton Keynes.',
     },
-    slug: 'jack-gpt',
-    desc: 'JackGPT is a Generative AI chatbot that uses the OpenAI API and vector embeddings to answer user prompted questions about me.'
+    slug: 'formula1',
+    desc: 'This is a description for my first project.'
   },
   {
     title: 'Project 2',

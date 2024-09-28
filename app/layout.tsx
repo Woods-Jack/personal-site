@@ -8,6 +8,7 @@ import Footer from '@/components/common/Footer/Footer'
 import '@fortawesome/fontawesome-svg-core/styles.css';
 // Prevent fontawesome from adding its CSS since we did it manually above:
 import { config } from '@fortawesome/fontawesome-svg-core';
+import JackGPT from '@/components/JackGPT'
 config.autoAddCss = false; /* eslint-disable import/first */
 
 export const metadata: Metadata = {
@@ -34,10 +35,13 @@ export default function RootLayout({children}: {
 }) {
   return (
       <html lang="en">
-        <body className={`${nunito.variable} ${playfair_display.variable}`}>
+        <body className={`${nunito.variable} ${playfair_display.variable} flex flex-col min-h-screen w-screen`}>
           <HeaderNav />
-          {children}
-          <Footer />
+            <div className='flex-grow'>
+            {children}
+            </div>
+            <JackGPT />
+            <Footer />
         </body>
       </html>
   )

@@ -5,21 +5,21 @@ import getCurrentYear from '@/utils/getCurrentYear';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0C1446] light-text py-6 xs:pb-12 md:pb-4">
-      <div className="container w-full mx-auto flex items-center justify-between flex-col md:flex-row">
-        <p className='text-base'>&copy;{`${getCurrentYear()} Jack Woods. All rights reserved.`}</p>
-        <div className="flex space-x-6 mt-4 md:mt-0 md:mr-64 h-8 justify-end">
-          <a className='w-8 hover:text-[#ff709c]' href='https://www.linkedin.com/in/jack-woods-london/' aria-label='LinkedIn page'>
-            <FontAwesomeIcon icon={faLinkedin} beat={true} />
+    <footer className="bg-[#0C1446] light-text px-4 pt-6 md:pb-6 pb-12">
+      <div className="flex md:items-left items-center flex-col xl:flex-row xl:justify-between md:w-max xl:w-full w-full max-w-full md:pl-8">
+        <p className='text-base w-max'>&copy;{`${getCurrentYear()} Jack Woods. All rights reserved.`}</p>
+        <div className="flex gap-6 h-8 justify-center">
+          <a className='w-8 hover:text-[#ff709c] text-3xl' href='https://www.linkedin.com/in/jack-woods-london/' aria-label='LinkedIn page'>
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a className='w-8 hover:text-[#ff709c]' href='https://www.instagram.com/jack.woods_/' aria-label='Instagram page'>
+          <a className='w-8 hover:text-[#ff709c] text-3xl' href='https://www.instagram.com/jack.woods_/' aria-label='Instagram page'>
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a className='w-8 hover:text-[#ff709c]' href='https://github.com/Woods-Jack/' aria-label='Github Profile'>
+          <a className='w-8 hover:text-[#292828] text-3xl' href='https://github.com/Woods-Jack/' aria-label='Github Profile'>
             <FontAwesomeIcon icon={faGithub} />           
           </a>
-         
         </div>
+        <div className='hidden xl:block' />
       </div>
     </footer>
   );

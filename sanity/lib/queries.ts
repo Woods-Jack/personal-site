@@ -2,7 +2,7 @@ import groq from "groq";
 
 // Get all posts
 export const postsQuery = groq`*[_type == "post" && defined(slug.current)]{
-    _id, title, slug, mainImage, publishedAt, "excerpt": array::join(string::split((pt::text(body)), "")[0..255], "") + "..."
+    _id, title, slug, mainImage, imageAltText, publishedAt, "excerpt": array::join(string::split((pt::text(body)), "")[0..255], "") + "..."
   } | order(publishedAt desc)`;
 
 // Get a single post by its slug

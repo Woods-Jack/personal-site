@@ -92,6 +92,15 @@ p {
   margin-bottom: 1.125rem;
 }
 
+li {
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+blockquote {
+  font-size: 1.125rem;
+}
+
 .avatar-wrapper {
   @media (min-width: theme('screens.md')) {
     position: absolute;

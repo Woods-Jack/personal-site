@@ -10,7 +10,7 @@ interface IEntryPoint {
 
 const EntryPoint = ({ openChatCb }: IEntryPoint) => {
     return (
-        <button className="bg-dark-sec light-text md:rounded-full rounded-t-3xl flex flex-row justify-center md:justify-start items-center w-full" onClick={() => openChatCb(true)}>
+        <button className="bg-[#175873] light-text md:rounded-full rounded-t-3xl flex flex-row justify-center md:justify-start items-center w-full" onClick={() => openChatCb(true)}>
             <div className="relative md:w-14 md:h-14 md:visible invisible">
                 <Image src='/avatar-gpt.jpg' fill className="object-cover rounded-full" alt="JackGPT avatar" />
             </div>
