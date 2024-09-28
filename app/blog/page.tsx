@@ -2,12 +2,7 @@ import { CardStack } from '@/components/common/Card/CardStack';
 import { client } from '@/sanity/lib/client'
 import { postsQuery } from '@/sanity/lib/queries';
 import { getImageUrl } from '@/utils/getImageUrl';
-import { PortableText } from '@portabletext/react';
-import { Image, PortableTextSpan, SanityDocument } from '@sanity/types';
-
-interface IBlog {
-  posts: BlogPost[];
-};
+import { Image, PortableTextSpan } from '@sanity/types';
 
 interface BlogPost {
   _id: string;
@@ -32,7 +27,7 @@ export default async function Blog() {
       <div className='max-w-[1024px] flex flex-col md:mx-auto mx-4 justify-center'>
         <div className='max-w-[768px]'>
           <h1>My Blog</h1>
-          <p>Welcome to my blog! This is a space for me to share things I'm interested in. Some posts will be about software engineering, while others not so much!  Have a look at some of my latest blog posts below...</p>
+          <p>Welcome to my blog! This is a space for me to share things I&apos;m interested in. Some posts will be about software engineering, while others not so much!  Have a look at some of my latest blog posts below...</p>
           </div>
         {posts.map((post) => {
           const img = {

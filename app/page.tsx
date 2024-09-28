@@ -7,7 +7,6 @@ import { TechIcon } from "@/components/common/TechIcon";
 import TechIconMini from "@/components/common/TechIconMini";
 import { CardStack } from "@/components/common/Card/CardStack";
 import { passions } from "@/constants/passions";
-import  JackGPT from "@/components/JackGPT";
 //import { projects } from "@/constants/projects";
 //import { CardRow } from "@/components/common/Card/CardRow";
 

@@ -16,14 +16,15 @@ const chatSchema = z.object({
 });
 
 export async function POST(req: NextRequest) {
+  const body = await req.json();
+  console.log("IN CHAT")
   try {
-    const body = await req.json();
     const { userInput, history, mockResponse } = chatSchema.parse(body);
     const historyWithoutSysMessages = removeSysMessages(history);
     const formattedHistory = buildChatHistory(
       historyWithoutSysMessages.slice(-4)
     );
-
+    
     const res = mockResponse
     ? await new Promise((resolve) => {
       setTimeout(

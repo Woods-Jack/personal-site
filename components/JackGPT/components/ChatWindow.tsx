@@ -38,6 +38,7 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
         { type: MESSAGE_TYPE.SYS, content: "..." },
       ])
     });
+    console.log('ABOUT TO CALL API WITH', userInput)
     const res = await fetch("/api/chat", {
       method: "POST",
       headers: {
@@ -46,7 +47,7 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
       body: JSON.stringify({ userInput: userInput, history: messageHistory }),
     });
     const json = await res.json();
-
+    console.log("I get response ", json)
     if (res.ok) {
       appendResponseMsg(false, json.kwargs.content);
     } else {
@@ -76,7 +77,7 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
 
   return (
     <div className="flex flex-col">
-      <div className="bg-dark-sec light-text py-1 px-4 rounded-t-2xl flex flex-row justify-between items-center">
+      <div className="bg-[#175873] light-text py-1 px-4 rounded-t-2xl flex flex-row justify-between items-center">
         <div>JackGPT</div>
         <button onClick={() => closeChatCb(false)}>
           <FontAwesomeIcon icon={faXmark as IconProp} width={24} />
@@ -87,7 +88,7 @@ const ChatWindow = ({ closeChatCb }: IChatWindow) => {
         disabled={isLoading}
         ref={inputRef}
         onKeyDown={addMsgOnEnter}
-        className="w-full disabled:bg-white p-2 resize-none h-12 border-[1px] border-gray-400"
+        className="w-full text-black disabled:bg-white p-2 resize-none h-12 border-[1px] border-gray-400"
         placeholder={
           isLoading ? "Waiting for response..." : "Type your question here..."
         }

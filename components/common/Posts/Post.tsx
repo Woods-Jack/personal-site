@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { SanityDocument } from "@sanity/client";
 import { PortableText } from "@portabletext/react";
 import { ptComponents } from "../PTComponents/PTComponents";
