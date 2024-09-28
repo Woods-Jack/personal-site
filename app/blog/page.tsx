@@ -34,7 +34,6 @@ export default async function Blog() {
             src: getImageUrl(post.mainImage, 400),
             alt: post.imageAltText,
           };
-          console.log('img', img)
           const url = BASE_URL + post.slug.current;
           return (
             <CardStack key={post._id} title={post.title} img={img} desc={post.excerpt} href={url} ctaText='Read More'/>

@@ -1,7 +1,7 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { client } from '@/sanity/lib/client'
 import { Image } from '@sanity/types'
-import { PortableTextComponentProps } from '@portabletext/react';
+import { PortableTextComponentProps, PortableTextComponents, PortableTextMarkComponentProps } from '@portabletext/react';
 
 function urlFor(source: Image) {
   return imageUrlBuilder(client).image(source)
@@ -13,7 +13,7 @@ interface CustomImage extends Image {
 }
 
 
-export const ptComponents = {
+export const ptComponents: PortableTextComponents = {
   types: {
     customImage: ({ value }: { value: CustomImage }) => {
       if (!value?.asset?._ref) {
@@ -33,13 +33,21 @@ export const ptComponents = {
       )
     },
   },
+  marks: {
+    link: ({ value, children }: PortableTextMarkComponentProps<any>) => {
+      const target = (value?.href || '').startsWith('http') ? '_blank' : undefined
+      return (
+        <a className='underline font-semibold text-[#175873]' href={value?.href} target={target} rel={target === '_blank' ? 'noindex nofollow' : undefined}>{children}</a>
+      )
+    }
+  },
   list: {
     bullet: ({ children }: PortableTextComponentProps<any>) => <ul className='ml-8 list-disc my-4'>{children}</ul>
   },
   block: {
-    blockquote: ({children }: PortableTextComponentProps<any>) => {
+    blockquote: ({ children }: PortableTextComponentProps<any>) => {
       return (
-        <blockquote className='m-4 pl-3 border-l-4 border-[#175873] italic'>{children}</blockquote>
+        <blockquote className='m-4 pl-3 border-l-4 border-[#ff709c] italic'>{children}</blockquote>
       )
     }
   },

@@ -16,7 +16,7 @@ export default function CVPage() {
         <h1 className='mb-4'>My CV</h1>
         <p>
           If you would like a copy for your records, feel free to download a copy&nbsp; 
-            <a href='/#contact' target='_blank' className='text-[#ff709c] underline'>by clicking here</a>
+            <a href='https://drive.google.com/file/d/19CQD6pZ_KsnVQUFN-gG9ukxiJq-7CpBk/view?usp=sharing' className='text-[#ff709c] underline'>by clicking here</a>
           . 
         </p>
         <p >
