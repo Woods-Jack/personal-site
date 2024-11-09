@@ -1,6 +1,6 @@
 export const cv = {
     header: {
-        content: 'For full contact details or a print copy of my CV, reach out to me using the contact form, or connect with me on LinkedIn.'
+        content: 'Full-stack software engineer at a business transformation consultancy with a focus on front-end web development. Extensive experience using Typescript / React to bring motivation and attention to detail to large agile teams, building high-quality solutions for retail and digital marketing clients. Excellent communication skills with a proven ability to explain technical details and solution outcomes to non-technical audiences.',
     },
     sections: [
         {
@@ -10,19 +10,19 @@ export const cv = {
                     title: 'Publicis Sapient',
                     subtitle: 'Associate Software Engineer',
                     date: 'October 2022 - Present',
-                    desc: ['Full-Stack engineer in Agile teams on large projects in Retail / Consumer products industries','Developed primarily front-end / AI Typescript solutions for large projects and small internal teams', 'Collaborated with product and experience teams to deliver customer-focused solutions', 'Engaging in learning and mentorship opportunities to grow my knowledge in a breadth of areas'],
+                    desc: ["Full-stack product engineer working in agile teams, delivering customer-focused solutions for clients in the retail and digital marketing sectors", "Contributing to large-scale repositories, collaborating closely with product, experience, and client stakeholders", "Proactively engaging in learning and mentorship opportunities to expand my technical knowledge and capabilities across a breadth of areas"]
                 },
                 {
                     title: 'Publicis Sapient',
                     subtitle: 'Software Engineering Intern',
                     date: 'July 2021 - August 2021',
-                    desc: ['Earnt a graduate position in a tech consultancy by standing out against computer science students', 'Built a consumer product sustainability journey web-app in a small engineering team using React'],
+                    desc: ['Earnt a graduate position in a tech consultancy by standing out against computer science peers', 'Built a consumer product sustainability journey web application as part of a small engineering team'],
                 },
                 {
                     title: 'Buro Happold',
-                    subtitle: 'MEP & Smart Buildings Industrial Placement Student',
+                    subtitle: 'Smart Buildings Industrial Placement Student',
                     date: 'July 2019 - August 2020',
-                    desc: ['Contextualised and analysed large sets of building data using bespoke scripts to identify actions for building maintenance teams to reduce energy consumption / increase occupant productivity', 'Consulted with new and existing /clients to advise on IoT products / solutions for their buildings'],
+                    desc: ['Contextualised and analysed large datasets of building performance data using custom scripts, identifying actionable insights to improve energy efficiency and occupant productivity for new and existing clients', 'Consulted with clients to advise on IoT products and solutions for their commercial buildings'],
                 },
             ],
         },
@@ -33,39 +33,49 @@ export const cv = {
                     title: 'University of Bath',
                     subtitle: 'Mechanical Engineering (MEng)',
                     date: 'September 2017 - June 2022',
-                    desc: ['Achieved a First in dissertation “Mapping Resource Flows with Semantic Web Technologies”', 'Used knowledge graphs to aggregate resource data and query to find areas for innovation', 'Specialised in computational and business modules: System Modelling and Simulation, Electronics, Signals and Drives, and Product Design and Development'],
+                    desc: ['First-class honours including first-class dissertation titled “Mapping Resource Flows with Semantic Web Technologies”', 'Specialised and excelled in software / business modules including System Modelling and Simulation, and Product Design and Development'],
                 },
                 {
                     title: 'Royal Latin School',
                     subtitle: 'A-Levels & GCSEs',
                     date: 'September 2010 - June 2017',
-                    desc: ['A-Levels | Mathematics A*, Further Mathematics A*, Physics A* & Computer Science A*', 'GCSEs | 10 A*, 1A including A* in  Mathematics, English Language, Physics & Spanish.'],
+                    desc: ['Achieved 4 A* A-Levels in Mathematics, Further Mathematics, Computer Science and Physics', 'Earned 10 A* & 1A GCSEs including A* in Mathematics, English, Physics and Spanish'],
                 },
             ]
         },
         {
-            header: 'Technologies and Frameworks',
+            header: "Projects",
             content: [
                 {
-                    title: 'Front-End Technologies',
-                    desc: ['Extensive use of Typescript and React on large scale eCommerce platforms. Use of NextJS to develop lightweight web applications and internal tools. Use of CSS frameworks such as Tailwind CSS and component libraries such as Chakra UI for styling and UX.',],
+                    title: 'JackGPT',
+                    subtitle: 'RAG-enabled AI Chatbot answering questions about me and my experience',
+                    desc: ['Designed and built a GPT-4-based chatbot using Langchain for TypeScript, incorporating a vector index store for Retrieval Augmented Generation (RAG) context', 'Created a pipeline to ingest website HTML data, which was then chunked and stored for contextual retrieval', 'Crafted a prompt engineering system to guardrail and optimise the AI-generated  responses'],
                 },
                 {
-                    title: 'Generative AI',
-                    desc: ['Use of the Azure OpenAI API to run chat and embeddings models. Langchain in JS for document creation and retrieval methods. Pinecone vector database for storing knowledge sources.',],
-                },
-                {
-                    title: 'Agile Tools',
-                    desc: ['Use of Atlassian tools (Jira and Confluence) to manage agile projects. Good understanding and experience in sprints, tickets and story points, backlog refinement and retrospectives.'],
-                },
+                    title: 'CodeAid',
+                    subtitle: 'Lead Engineer for non-profit collaboration with women\'s advocate charity',
+                    desc: ['Remodelled their existing  sites and built WordPress templates and user guides for their members to create  web platforms for their local geographies to engage with the charity','Worked directly with the client to define a bespoke solution based on end-user needs'],
+                }
             ]
         },
         {
-            header: 'Other Skills',
+            header: 'Skills',
             content: [
                 {
-                    title: 'Presenting / Public Speaking',
-                    desc: ['My time in musical theatre and stage management at University has given me a unique love for presenting work in an engaging way, with extensive experience presenting to large audiences. I take particular pride in being able to communicate technical content in an engaging and relevant way irrespective of the audience\'s background.',],
+                    title: 'Programming Languages',
+                    desc: ['Highly proficient in Typescript / Javascript', 'Proficient in Python and Java'],
+                },
+                {
+                    title: 'Front-End Frameworks',
+                    desc: ['Next.js and React to build small and large-scale web applications for personal projects and multi-national clients','Tailwind CSS, Chakra UI and other component system libraries for styling and UI implementation', 'Wordpress and Elementor for customisable sites for charities and small businesses'],
+                },
+                {
+                    title: 'Back-End / AI Orchestration',
+                    desc: ['Node.js back-end fo full-stack Typescript applications.', 'MongoDB for vector stores and PostgreSQL for data store in web applications', 'Langchain and Azure OpenAI for orchestration and connection of Python/TS applications to AI models'],
+                },
+                {
+                    title: 'Soft Skills',
+                    desc: ['Excellent presentation and communication skills - experience performing in front of hundreds of people and stage managing a 70 person cast', "Strong collaboration across cross-functional teams, including Agile teams and methodologies"],
                 },
             ]
         },
