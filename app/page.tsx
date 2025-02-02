@@ -49,7 +49,7 @@ export default async function Home() {
               eventually my current role today.
             </p>
             <p>
-              I am a full-stack engineer specialising in NextJS / Typescript
+              I am a full-stack engineer specialising in modern web-based
               applications, with a hunger to continue to learn new technologies
               as my career progresses. My motivation for my work is solving real
               problems using technology to make the world a slightly better

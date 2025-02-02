@@ -7,9 +7,15 @@ export const cv = {
             header: 'Work Experience',
             content: [
                 {
+                    title: "Novabook",
+                    subtitle: "Full-Stack Engineer",
+                    date: "January 2025 - Present",
+                    desc: ["Full-stack engineer working to revolutionise the accounting sector for UK startups and small businesses", "Using AI to automate and streamline accounting and bookkeeping processes", "Use of AWS and serverless technologies to build an intuitive and user-friendly client web app from ideation to production"]
+                },
+                {
                     title: 'Publicis Sapient',
                     subtitle: 'Associate Software Engineer',
-                    date: 'October 2022 - Present',
+                    date: 'October 2022 - December 2024',
                     desc: ["Full-stack product engineer working in agile teams, delivering customer-focused solutions for clients in the retail and digital marketing sectors", "Contributing to large-scale repositories, collaborating closely with product, experience, and client stakeholders", "Proactively engaging in learning and mentorship opportunities to expand my technical knowledge and capabilities across a breadth of areas"]
                 },
                 {
